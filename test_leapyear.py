@@ -13,5 +13,10 @@ class TestLeapYear(unittest.TestCase):
         self.assertEqual(leapyear.leapyear(16), "is a leap year")
         self.assertEqual(leapyear.leapyear(404), "is a leap year")
 
+        #Non leap years divisible by 100 but not 400
+        self.assertEqual(leapyear.leapyear(100), "is not a leap year")
+        self.assertEqual(leapyear.leapyear(300), "is not a leap year")
+        self.assertEqual(leapyear.leapyear(500), "is not a leap year")
+
 if __name__ == '__main__':
     unittest.main(verbosity=2)
