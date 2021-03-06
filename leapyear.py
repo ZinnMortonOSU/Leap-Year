@@ -9,3 +9,12 @@ def leapyear(year):
             return "is a leap year"
     else:
         return "is not a leap year"
+
+inputYearStr = input("Input a year: ")
+
+if(inputYearStr.isnumeric()):
+    inputYear = int(inputYearStr)
+
+    print(inputYearStr + " " + leapyear(inputYear))
+else:
+    print("Please enter a positive integer")
